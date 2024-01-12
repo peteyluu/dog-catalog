@@ -9,6 +9,13 @@ Welcome to the Dog Catalog App! This application allows users to explore and com
 - Compare different dog breeds to help identify a preferred one.
 - Add a specific dog breed to your favorites.
 
+## Suggestions and future improvements
+
+- Show a comparative table with the selected dog breeds, highlighting relevant attributes for the user. Example: temperament, size, etc.
+- Interaction that allows the user to filter and compare the breeds by characteristics and suggest potential matches.
+- Show the total number of breeds, with the possibility of obtaining the recommendation or most voted breed for by users.
+- Share my breed match on social media.
+
 ## Technologies Used
 
 - React
