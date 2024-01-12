@@ -70,12 +70,12 @@ const CatalogPage = () => {
     localStorage.setItem("favoriteBreeds", JSON.stringify(updatedFavorites));
   };
   return (
-    <Flex direction="column" UNSAFE_className="main_container">
-      <Flex direction="row" justifyContent="space-between" alignItems="center" marginX="size-300">
-        <Heading height="size-400" level={1}>
-          {"Dog Catalog"}
+    <Flex direction="column" UNSAFE_className="main_container" marginX="size-100">
+      <Flex direction="row" justifyContent="space-between" alignItems="center" marginBottom="size-200">
+        <Heading height="size-300" level={1}>
+          {!favoritesMode ? "Dog Catalog" : "My Favorites"}
         </Heading>
-        <Button variant="primary" marginTop="size-100" onPress={() => setFavoritesMode(!favoritesMode)}>
+        <Button variant="primary" marginTop="size-250" onPress={() => setFavoritesMode(!favoritesMode)}>
           {!favoritesMode ? (
             <>
               <div style={{ width: "1rem", padding: "4px 4px 0px 0px" }}>
@@ -84,17 +84,17 @@ const CatalogPage = () => {
               <Text>{count} Dogs</Text>
             </>
           ) : (
-            <Link to="/">Go Home</Link>
+            <Link to="/">Go Back</Link>
           )}
         </Button>
       </Flex>
 
       {!favoritesMode ? (
-        <Flex gap="size-100" UNSAFE_className="container">
+        <Flex gap="size-100" direction={{ base: "column", L: "row" }}>
           <Flex direction="column" gap="size-100">
             <ListView
-              margin="size-300"
-              width="size-5000"
+              UNSAFE_className="test"
+              overflowMode="wrap"
               height="size-6000"
               aria-label="ListView with controlled selection"
               selectionMode="multiple"
@@ -113,7 +113,6 @@ const CatalogPage = () => {
               )}
             </ListView>
             <Slider
-              margin="size-300"
               label="Breeds to compare"
               value={maxBreed}
               onChange={setMaxBreed}
@@ -122,11 +121,9 @@ const CatalogPage = () => {
               defaultValue={4}
             />
           </Flex>
-          <Flex direction="column" gap="size-100" height="size-6000" UNSAFE_className="tag-group">
+          <Flex direction="column" gap="size-100" height="size-6000">
             <TagGroup
-              marginTop="size-300"
               maxRows={2}
-              width="size-6000"
               label="Breeds Selected"
               items={tagGroup}
               onRemove={onRemove}
@@ -152,7 +149,7 @@ const CatalogPage = () => {
           </Flex>
         </Flex>
       ) : (
-        <Flex direction="row" gap="size-100" height="size-6000" margin="size-300" wrap>
+        <Flex direction="row" gap="size-100" height="size-6000" wrap>
           {favorites.map((id) => (
             <DogDetailsPage
               key={id}
