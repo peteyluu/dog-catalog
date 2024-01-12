@@ -1,6 +1,6 @@
 # Dog Catalog
 
-Welcome to the React Dog Catalog App! This application allows users to explore and compare different dog breeds.
+Welcome to the Dog Catalog App! This application allows users to explore and compare different dog breeds.
 
 ## Features
 
@@ -14,7 +14,7 @@ Welcome to the React Dog Catalog App! This application allows users to explore a
 - React
 - TypeScript
 - Adobe React Spectrum Components
-- react-router-dom
+- React Router
 - The Dog API
 
 ## Getting Started
@@ -22,7 +22,7 @@ Welcome to the React Dog Catalog App! This application allows users to explore a
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/dog-catalog.git
+git clone https://github.com/peteyluu/dog-catalog.git
 cd dog-catalog
 ```
 
@@ -38,9 +38,9 @@ npm install
 npm start
 ```
 
-## Example
+## Live Demo
 
-Check out the live demo: Dog Catalog App
+Check out the live demo: [Dog Catalog App](https://transcendent-platypus-7c2ed3.netlify.app/)
 
 ## Contributors
 

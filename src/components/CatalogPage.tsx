@@ -50,7 +50,7 @@ const CatalogPage = () => {
     const idSet = new Set([...selectedKeys.entries()].map((el: any) => parseInt(el[0])));
     const selectedBreeds = dogBreeds.filter((dogBreed) => idSet.has(dogBreed.id));
     setTagGroup(selectedBreeds);
-  }, [selectedKeys]);
+  }, [selectedKeys, dogBreeds]);
 
   const onRemove = (keys: Set<Key>) => {
     setTagGroup((prevItems: BreedItem[]) => prevItems.filter((item: BreedItem) => !keys.has(item.id)));
